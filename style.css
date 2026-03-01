@@ -1,4 +1,4 @@
-/* 1. Font */
+/* Font */
 @font-face {
   font-family: "AktivGrotesk";
   src: url("fonts/AktivGrotesk-Regular.otf") format("opentype");
@@ -6,7 +6,7 @@
   font-style: normal;
 }
 
-/* 2. Global Reset */
+/* Global Reset */
 * {
   margin: 0;
   padding: 0;
@@ -15,11 +15,11 @@
 
 body {
   font-family: "AktivGrotesk", Arial, sans-serif;
-  background: #ffffff;
-  color: #000000;
+  background: #fff;
+  color: #000;
 }
 
-/* 3. Left Column */
+/* Left Column */
 .left-column {
   position: fixed;
   top: 40px;
@@ -27,18 +27,18 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 40px; /* space between icon and first year */
+  gap: 20px; /* small space between icon and years */
 }
 
 /* Instagram Icon */
 .instagram-icon {
-  width: 40px;
-  height: 40px;
+  width: 24px;
+  height: 24px;
   cursor: pointer;
-  transition: transform 0.3s;
+  transition: transform 0.2s;
 }
 
-.instagram-icon:hover {
+.instagram-link:hover .instagram-icon {
   transform: scale(1.1);
 }
 
@@ -46,73 +46,67 @@ body {
 .year-nav {
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 20px;
 }
 
 .year-nav .year {
-  font-size: 20px;
-  font-weight: 400;
+  font-size: 18px;
   cursor: default;
 }
 
-/* 4. Home Button */
+/* Home Button */
 .home-button {
   position: fixed;
   top: 20px;
   right: 20px;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
   text-decoration: none;
-  color: #000000;
+  color: #000;
 }
 
-/* 5. Landing Content */
+/* Landing Content */
 .landing-content {
-  margin-left: 160px; /* space for left column */
+  margin-left: 120px; /* space for left column */
   margin-top: 200px;
   max-width: 700px;
 }
 
 .landing-content h1 {
-  font-size: 48px;
-  font-weight: 400;
-  margin-bottom: 30px;
+  font-size: 40px;
+  margin-bottom: 20px;
 }
 
 .landing-content p {
-  font-size: 20px;
+  font-size: 18px;
   line-height: 1.6;
 }
 
-/* 6. Responsive Layout */
-@media (max-width: 1024px) {
-  .instagram-icon { width: 36px; height: 36px; }
-  .year-nav .year { font-size: 18px; gap: 24px; }
-  .landing-content h1 { font-size: 40px; }
-  .landing-content p { font-size: 18px; }
-}
-
+/* Responsive */
 @media (max-width: 768px) {
   .left-column {
     position: static;
     flex-direction: row;
-    gap: 20px;
+    gap: 15px;
     margin-top: 40px;
   }
-  .instagram-icon { width: 30px; height: 30px; }
-  .year-nav { flex-direction: row; gap: 10px; }
+  .year-nav {
+    flex-direction: row;
+    gap: 10px;
+  }
   .landing-content {
     margin-left: 20px;
     margin-top: 80px;
     text-align: left;
   }
-  .landing-content h1 { font-size: 36px; }
+  .landing-content h1 { font-size: 32px; }
   .landing-content p { font-size: 16px; }
+  .home-button { font-size: 16px; }
 }
 
 @media (max-width: 480px) {
-  .instagram-icon { width: 24px; height: 24px; }
+  .instagram-icon { width: 20px; height: 20px; }
   .landing-content h1 { font-size: 28px; }
   .landing-content p { font-size: 14px; }
-  .home-button { font-size: 16px; }
+  .home-button { font-size: 14px; }
 }
