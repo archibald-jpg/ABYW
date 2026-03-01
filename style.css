@@ -13,36 +13,38 @@ body {
   color: #000;
 }
 
-/* --- Years on the left --- */
-.years {
+/* --- Left panel: social + years --- */
+.left-panel {
   position: fixed;
   top: 50%;
   left: 20px;
   transform: translateY(-50%);
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   gap: 20px;
-  font-size: 18px;
 }
 
-/* --- Instagram button next to years --- */
-.social {
-  position: fixed;
-  top: 50%;
-  left: 100px;
-  transform: translateY(-50%);
-}
-
+/* --- Instagram button --- */
 .social a img {
   width: 30px;
   height: 30px;
   filter: grayscale(100%);
   transition: filter 0.3s, transform 0.3s;
+  margin-bottom: 20px; /* spacing from years */
 }
 
 .social a img:hover {
   filter: none;
   transform: scale(1.1);
+}
+
+/* --- Years --- */
+.years {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-size: 18px;
 }
 
 /* --- Home button --- */
@@ -69,19 +71,14 @@ body {
 
 /* --- Responsive Layouts --- */
 @media (max-width: 1024px) {
-  .years {
-    left: 10px;
-    gap: 15px;
-    font-size: 16px;
-  }
-
-  .social {
-    left: 70px;
-  }
-
   .social a img {
     width: 28px;
     height: 28px;
+  }
+
+  .years {
+    font-size: 16px;
+    gap: 15px;
   }
 
   .welcome {
@@ -90,23 +87,29 @@ body {
 }
 
 @media (max-width: 768px) {
-  .years {
-    display: none;
-  }
-
-  .social {
-    left: 20px;
-    top: 80px;
+  .left-panel {
+    top: 20px;
     transform: none;
+    flex-direction: row;
+    align-items: center;
   }
 
   .social a img {
+    margin-bottom: 0;
+    margin-right: 10px;
     width: 25px;
     height: 25px;
   }
 
+  .years {
+    flex-direction: row;
+    gap: 10px;
+    font-size: 14px;
+  }
+
   .welcome {
     font-size: 22px;
+    top: 60%;
   }
 }
 
