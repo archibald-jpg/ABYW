@@ -27,7 +27,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 40px; /* space between icon and years */
+  gap: 40px; /* space between icon and first year */
 }
 
 /* Instagram Icon */
@@ -42,7 +42,7 @@ body {
   transform: scale(1.1);
 }
 
-/* 4. Years */
+/* Vertical Years */
 .year-nav {
   display: flex;
   flex-direction: column;
@@ -55,7 +55,18 @@ body {
   cursor: default;
 }
 
-/* 5. Main Landing Content */
+/* 4. Home Button */
+.home-button {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #000000;
+}
+
+/* 5. Landing Content */
 .landing-content {
   margin-left: 160px; /* space for left column */
   margin-top: 200px;
@@ -73,27 +84,35 @@ body {
   line-height: 1.6;
 }
 
-/* 6. Responsive */
+/* 6. Responsive Layout */
+@media (max-width: 1024px) {
+  .instagram-icon { width: 36px; height: 36px; }
+  .year-nav .year { font-size: 18px; gap: 24px; }
+  .landing-content h1 { font-size: 40px; }
+  .landing-content p { font-size: 18px; }
+}
+
 @media (max-width: 768px) {
   .left-column {
     position: static;
     flex-direction: row;
-    justify-content: flex-start;
     gap: 20px;
     margin-top: 40px;
   }
-
+  .instagram-icon { width: 30px; height: 30px; }
+  .year-nav { flex-direction: row; gap: 10px; }
   .landing-content {
-    margin-left: 30px;
-    margin-top: 60px;
+    margin-left: 20px;
+    margin-top: 80px;
     text-align: left;
   }
+  .landing-content h1 { font-size: 36px; }
+  .landing-content p { font-size: 16px; }
+}
 
-  .landing-content h1 {
-    font-size: 36px;
-  }
-
-  .landing-content p {
-    font-size: 18px;
-  }
+@media (max-width: 480px) {
+  .instagram-icon { width: 24px; height: 24px; }
+  .landing-content h1 { font-size: 28px; }
+  .landing-content p { font-size: 14px; }
+  .home-button { font-size: 16px; }
 }
