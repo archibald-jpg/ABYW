@@ -13,25 +13,23 @@ body {
   color: #000;
 }
 
-/* --- Left panel: social + years --- */
+/* --- Left panel: Instagram above years --- */
 .left-panel {
   position: fixed;
-  top: 50%;
+  top: 20px;
   left: 20px;
-  transform: translateY(-50%);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 20px;
 }
 
-/* --- Instagram button --- */
+/* Instagram icon */
 .social a img {
   width: 30px;
   height: 30px;
   filter: grayscale(100%);
   transition: filter 0.3s, transform 0.3s;
-  margin-bottom: 20px; /* spacing from years */
 }
 
 .social a img:hover {
@@ -39,7 +37,7 @@ body {
   transform: scale(1.1);
 }
 
-/* --- Years --- */
+/* Years vertically below the Instagram icon */
 .years {
   display: flex;
   flex-direction: column;
@@ -47,7 +45,7 @@ body {
   font-size: 18px;
 }
 
-/* --- Home button --- */
+/* Home button */
 .home-button {
   position: fixed;
   top: 20px;
@@ -58,7 +56,7 @@ body {
   font-weight: bold;
 }
 
-/* --- Welcome message --- */
+/* Welcome message */
 .welcome {
   position: absolute;
   top: 50%;
@@ -69,61 +67,25 @@ body {
   padding: 0 20px;
 }
 
-/* --- Responsive Layouts --- */
+/* --- Responsive --- */
 @media (max-width: 1024px) {
-  .social a img {
-    width: 28px;
-    height: 28px;
-  }
-
-  .years {
-    font-size: 16px;
-    gap: 15px;
-  }
-
-  .welcome {
-    font-size: 24px;
-  }
+  .social a img { width: 28px; height: 28px; }
+  .years { font-size: 16px; gap: 15px; }
+  .welcome { font-size: 24px; }
 }
 
 @media (max-width: 768px) {
   .left-panel {
-    top: 20px;
-    transform: none;
-    flex-direction: row;
-    align-items: center;
+    top: 10px;
+    left: 10px;
   }
-
-  .social a img {
-    margin-bottom: 0;
-    margin-right: 10px;
-    width: 25px;
-    height: 25px;
-  }
-
-  .years {
-    flex-direction: row;
-    gap: 10px;
-    font-size: 14px;
-  }
-
-  .welcome {
-    font-size: 22px;
-    top: 60%;
-  }
+  .social a img { width: 25px; height: 25px; }
+  .years { font-size: 14px; gap: 10px; }
+  .welcome { font-size: 22px; top: 60%; }
 }
 
 @media (max-width: 480px) {
-  .social a img {
-    width: 22px;
-    height: 22px;
-  }
-
-  .welcome {
-    font-size: 18px;
-  }
-
-  .home-button {
-    font-size: 18px;
-  }
+  .social a img { width: 22px; height: 22px; }
+  .welcome { font-size: 18px; }
+  .home-button { font-size: 18px; }
 }
