@@ -1,10 +1,8 @@
-/* Font */
 @font-face {
   font-family: "AktivGrotesk";
   src: url("fonts/AktivGrotesk-Regular.otf") format("opentype");
 }
 
-/* RESET */
 * {
   margin: 0;
   padding: 0;
@@ -17,7 +15,7 @@ body {
   color: #000;
 }
 
-/* LINKS */
+/* GLOBAL LINK OVERRIDE */
 a, button {
   color: inherit;
   text-decoration: none;
@@ -37,9 +35,10 @@ a, button {
   display: flex;
   flex-direction: column;
   gap: 14px;
+  width: 180px;       /* ensure left column width */
 }
 
-/* Instagram */
+/* INSTAGRAM ICON */
 .instagram-link {
   width: 16px;
   height: 16px;
@@ -75,11 +74,12 @@ a, button {
 
 .projects {
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* stacked vertically */
   gap: 4px;
 }
 
 .project-link {
+  display: block;
   font-size: 14px;
   color: #000;
   text-align: left;
@@ -90,7 +90,7 @@ a, button {
   opacity: 0.5;
 }
 
-/* TOP RIGHT HOME BUTTON */
+/* HOME BUTTON */
 .home-button {
   position: fixed;
   top: 40px;
@@ -107,8 +107,8 @@ a, button {
 
 /* MAIN CONTENT */
 .landing-content {
-  margin-left: 200px;
-  margin-top: 200px;
+  margin-left: 240px;  /* leave room for left nav */
+  padding: 40px;
   max-width: 700px;
 }
 
