@@ -15,15 +15,14 @@ body {
   color: #000;
 }
 
-/* GLOBAL LINK OVERRIDE */
+/* Links clean */
 a {
-  color: #000;        /* pure black text */
-  text-decoration: none; /* no underline */
-  font-weight: 400;
+  color: #000;
+  text-decoration: none;
 }
 
 a:hover {
-  opacity: 0.5;        /* subtle hover */
+  opacity: 0.5;
 }
 
 /* LEFT COLUMN */
@@ -33,32 +32,26 @@ a:hover {
   left: 40px;
   display: flex;
   flex-direction: column;
-  gap: 14px;
-  width: 180px;
+  gap: 20px;
+  width: 200px;
 }
 
-/* INSTAGRAM ICON */
+/* Instagram */
 .instagram-link {
   width: 16px;
   height: 16px;
-  display: block;
 }
 
 .instagram-icon {
   width: 100%;
   height: 100%;
-  transition: transform 0.2s ease;
 }
 
-.instagram-icon:hover {
-  transform: scale(1.15);
-}
-
-/* YEARS + PROJECTS */
+/* Years + Projects */
 .year-nav {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 20px;
 }
 
 .year-block {
@@ -73,33 +66,25 @@ a:hover {
 
 .projects {
   display: flex;
-  flex-direction: column; /* stacked vertically */
+  flex-direction: column;
   gap: 4px;
 }
 
 .project-link {
   font-size: 14px;
-  cursor: pointer;
 }
 
-/* TOP RIGHT HOME BUTTON */
+/* HOME BUTTON */
 .home-button {
   position: fixed;
   top: 40px;
   right: 40px;
   font-size: 16px;
-  text-decoration: none;
-  color: #000;
-  transition: opacity 0.2s ease;
-}
-
-.home-button:hover {
-  opacity: 0.6;
 }
 
 /* MAIN CONTENT */
 .landing-content {
-  margin-left: 240px;  /* leave room for left nav */
+  margin-left: 260px;
   padding: 40px;
   max-width: 700px;
 }
@@ -111,34 +96,4 @@ a:hover {
 
 .landing-content p {
   font-size: 18px;
-}
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  .left-column {
-    position: static;
-    margin: 30px;
-    flex-direction: row;
-    gap: 10px;
-  }
-
-  .year-nav {
-    flex-direction: row;
-    gap: 8px;
-  }
-
-  .projects {
-    flex-direction: row;
-    gap: 8px;
-  }
-
-  .landing-content {
-    margin-left: 30px;
-    margin-top: 60px;
-  }
-
-  .home-button {
-    top: 30px;
-    right: 30px;
-  }
 }
