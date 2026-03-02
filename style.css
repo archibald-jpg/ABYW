@@ -1,12 +1,9 @@
-/* 1. Font */
 @font-face {
   font-family: "AktivGrotesk";
   src: url("fonts/AktivGrotesk-Regular.otf") format("opentype");
-  font-weight: 400;
-  font-style: normal;
 }
 
-/* 2. Global Reset */
+/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -19,81 +16,96 @@ body {
   color: #000000;
 }
 
-/* 3. Left Column */
+/* Left column */
 .left-column {
   position: fixed;
-  top: 40px;
+  top: 40px;   /* This controls vertical alignment */
   left: 40px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 40px; /* space between icon and years */
+  gap: 14px;
 }
 
-/* Instagram Icon */
+/* Instagram */
+.instagram-link {
+  width: 16px;
+  height: 16px;
+  display: block;
+}
+
 .instagram-icon {
-  width: 40px;
-  height: 40px;
+  width: 100%;
+  height: 100%;
   cursor: pointer;
-  transition: transform 0.3s;
+  transition: transform 0.2s ease;
 }
 
 .instagram-icon:hover {
-  transform: scale(1.1);
+  transform: scale(1.15);
 }
 
-/* 4. Years */
+/* Years */
 .year-nav {
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 14px;
+  font-size: 16px;
 }
 
-.year-nav .year {
-  font-size: 20px;
-  font-weight: 400;
-  cursor: default;
+/* Top-right ABYW button */
+.home-button {
+  position: fixed;
+  top: 40px;    /* SAME as .left-column top */
+  right: 40px;
+  font-size: 16px;
+  text-decoration: none;
+  font-weight: 500;
+  color: #000;
+  transition: opacity 0.2s ease;
 }
 
-/* 5. Main Landing Content */
+.home-button:hover {
+  opacity: 0.6;
+}
+
+/* Landing Content */
 .landing-content {
-  margin-left: 160px; /* space for left column */
-  margin-top: 200px;
+  margin-left: 160px;
+  margin-top: 180px;
   max-width: 700px;
 }
 
 .landing-content h1 {
-  font-size: 48px;
-  font-weight: 400;
-  margin-bottom: 30px;
+  font-size: 42px;
+  margin-bottom: 20px;
 }
 
 .landing-content p {
-  font-size: 20px;
-  line-height: 1.6;
+  font-size: 18px;
+  line-height: 1.5;
 }
 
-/* 6. Responsive */
+/* Responsive */
 @media (max-width: 768px) {
   .left-column {
     position: static;
+    margin: 30px;
     flex-direction: row;
-    justify-content: flex-start;
-    gap: 20px;
-    margin-top: 40px;
+    gap: 10px;
+  }
+
+  .year-nav {
+    flex-direction: row;
+    gap: 8px;
+    font-size: 14px;
+  }
+
+  .home-button {
+    top: 30px;
+    right: 30px;
   }
 
   .landing-content {
-    margin-left: 30px;
-    margin-top: 60px;
-    text-align: left;
-  }
-
-  .landing-content h1 {
-    font-size: 36px;
-  }
-
-  .landing-content p {
-    font-size: 18px;
+    margin: 60px 30px;
   }
 }
