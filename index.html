@@ -8,10 +8,10 @@
 </head>
 <body>
 
-<!-- LEFT COLUMN NAV -->
+<!-- LEFT COLUMN -->
 <div class="left-column">
 
-  <!-- Instagram -->
+  <!-- Instagram Icon -->
   <a href="https://www.instagram.com/YOUR_USERNAME" target="_blank" class="instagram-link">
     <svg viewBox="0 0 24 24" class="instagram-icon">
       <rect x="2" y="2" width="20" height="20" rx="5" fill="none" stroke="black" stroke-width="2"/>
@@ -20,23 +20,35 @@
     </svg>
   </a>
 
-  <!-- YEARS + PROJECTS -->
   <div class="year-nav">
 
+    <!-- 2026 -->
     <div class="year-block">
       <div class="year">2026</div>
       <div class="projects">
-        <a href="#" class="project-link" data-project="movement-matters">Movement Matters</a>
-        <a href="#" class="project-link" data-project="max-speed-3">Max Speed 3</a>
-        <a href="#" class="project-link" data-project="handbook-tactical">Handbook Tactical</a>
-        <a href="#" class="project-link" data-project="156-billionaires">156 billionaires</a>
-        <a href="#" class="project-link" data-project="tactical-test">Tactical Test</a>
-        <a href="#" class="project-link" data-project="iiewywt-question">IIEWYWT?</a>
-        <a href="#" class="project-link" data-project="iiewywt-exclaim">IIEWYWT!</a>
+        <a href="movement-matters.html" class="project-link">Movement Matters</a>
+        <a href="max-speed-3.html" class="project-link">Max Speed 3</a>
+        <a href="handbook-tactical.html" class="project-link">Handbook Tactical</a>
+        <a href="156-billionaires.html" class="project-link">156 billionaires</a>
+        <a href="tactical-test.html" class="project-link">Tactical Test</a>
+        <a href="iiewywt-question.html" class="project-link">IIEWYWT?</a>
+        <a href="iiewywt-exclaim.html" class="project-link">IIEWYWT!</a>
       </div>
     </div>
 
-    <div class="year">2025</div>
+    <!-- 2025 -->
+    <div class="year-block">
+      <div class="year">2025</div>
+      <div class="projects">
+        <a href="do-something.html" class="project-link">Do Something</a>
+        <a href="london-tech-week.html" class="project-link">London Tech Week</a>
+        <a href="traces.html" class="project-link">Traces</a>
+        <a href="data-driven-suminagashi.html" class="project-link">Data Driven Suminagashi</a>
+        <a href="motion-graphic-experiments.html" class="project-link">Motion Graphic experiments</a>
+      </div>
+    </div>
+
+    <!-- Other Years -->
     <div class="year">2024</div>
     <div class="year">2023</div>
     <div class="year">2022</div>
@@ -47,45 +59,14 @@
   </div>
 </div>
 
-<!-- TOP RIGHT HOME BUTTON -->
-<a href="#" class="home-button" id="home-button">ABYW</a>
+<!-- HOME BUTTON -->
+<a href="index.html" class="home-button">ABYW</a>
 
-<!-- MAIN CONTENT AREA -->
-<main class="landing-content" id="main-content">
+<!-- MAIN CONTENT -->
+<main class="landing-content">
   <h1>Hi I'm Archibald</h1>
   <p>Welcome to my portfolio</p>
 </main>
-
-<script>
-  const projectData = {
-    "movement-matters": "<h1>Movement Matters</h1><p>Project description here.</p>",
-    "max-speed-3": "<h1>Max Speed 3</h1><p>Project description here.</p>",
-    "handbook-tactical": "<h1>Handbook Tactical</h1><p>Project description here.</p>",
-    "156-billionaires": "<h1>156 Billionaires</h1><p>Project description here.</p>",
-    "tactical-test": "<h1>Tactical Test</h1><p>Project description here.</p>",
-    "iiewywt-question": "<h1>IIEWYWT?</h1><p>Project description here.</p>",
-    "iiewywt-exclaim": "<h1>IIEWYWT!</h1><p>Project description here.</p>"
-  };
-
-  const projectLinks = document.querySelectorAll('.project-link');
-  const mainContent = document.getElementById('main-content');
-  const homeButton = document.getElementById('home-button');
-
-  projectLinks.forEach(link => {
-    link.addEventListener('click', (e) => {
-      e.preventDefault();
-      const project = link.getAttribute('data-project');
-      mainContent.innerHTML = projectData[project] || "<p>Project not found</p>";
-      mainContent.scrollTop = 0;
-    });
-  });
-
-  homeButton.addEventListener('click', (e) => {
-    e.preventDefault();
-    mainContent.innerHTML = "<h1>Hi I'm Archibald</h1><p>Welcome to my portfolio</p>";
-    mainContent.scrollTop = 0;
-  });
-</script>
 
 </body>
 </html>
