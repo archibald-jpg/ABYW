@@ -26,13 +26,13 @@
     <div class="year-block">
       <div class="year">2026</div>
       <div class="projects">
-        <button class="project-link" data-project="movement-matters">Movement Matters</button>
-        <button class="project-link" data-project="max-speed-3">Max Speed 3</button>
-        <button class="project-link" data-project="handbook-tactical">Handbook Tactical</button>
-        <button class="project-link" data-project="156-billionaires">156 billionaires</button>
-        <button class="project-link" data-project="tactical-test">Tactical Test</button>
-        <button class="project-link" data-project="iiewywt-question">IIEWYWT?</button>
-        <button class="project-link" data-project="iiewywt-exclaim">IIEWYWT!</button>
+        <a href="#" class="project-link" data-project="movement-matters">Movement Matters</a>
+        <a href="#" class="project-link" data-project="max-speed-3">Max Speed 3</a>
+        <a href="#" class="project-link" data-project="handbook-tactical">Handbook Tactical</a>
+        <a href="#" class="project-link" data-project="156-billionaires">156 billionaires</a>
+        <a href="#" class="project-link" data-project="tactical-test">Tactical Test</a>
+        <a href="#" class="project-link" data-project="iiewywt-question">IIEWYWT?</a>
+        <a href="#" class="project-link" data-project="iiewywt-exclaim">IIEWYWT!</a>
       </div>
     </div>
 
@@ -72,10 +72,10 @@
   const homeButton = document.getElementById('home-button');
 
   projectLinks.forEach(link => {
-    link.addEventListener('click', () => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
       const project = link.getAttribute('data-project');
       mainContent.innerHTML = projectData[project] || "<p>Project not found</p>";
-      // Scroll right content to top without moving left column
       mainContent.scrollTop = 0;
     });
   });
