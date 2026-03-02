@@ -75,14 +75,15 @@
     link.addEventListener('click', () => {
       const project = link.getAttribute('data-project');
       mainContent.innerHTML = projectData[project] || "<p>Project not found</p>";
-      window.scrollTo(0,0); // scroll to top of content
+      // Scroll right content to top without moving left column
+      mainContent.scrollTop = 0;
     });
   });
 
   homeButton.addEventListener('click', (e) => {
     e.preventDefault();
     mainContent.innerHTML = "<h1>Hi I'm Archibald</h1><p>Welcome to my portfolio</p>";
-    window.scrollTo(0,0);
+    mainContent.scrollTop = 0;
   });
 </script>
 
