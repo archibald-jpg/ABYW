@@ -16,15 +16,14 @@ body {
 }
 
 /* GLOBAL LINK OVERRIDE */
-a, button {
-  color: inherit;
-  text-decoration: none;
-  font-family: inherit;
+a {
+  color: #000;        /* pure black text */
+  text-decoration: none; /* no underline */
   font-weight: 400;
-  cursor: pointer;
-  background: none;
-  border: none;
-  padding: 0;
+}
+
+a:hover {
+  opacity: 0.5;        /* subtle hover */
 }
 
 /* LEFT COLUMN */
@@ -35,7 +34,7 @@ a, button {
   display: flex;
   flex-direction: column;
   gap: 14px;
-  width: 180px;       /* ensure left column width */
+  width: 180px;
 }
 
 /* INSTAGRAM ICON */
@@ -79,18 +78,11 @@ a, button {
 }
 
 .project-link {
-  display: block;
   font-size: 14px;
-  color: #000;
-  text-align: left;
-  transition: opacity 0.2s ease;
+  cursor: pointer;
 }
 
-.project-link:hover {
-  opacity: 0.5;
-}
-
-/* HOME BUTTON */
+/* TOP RIGHT HOME BUTTON */
 .home-button {
   position: fixed;
   top: 40px;
